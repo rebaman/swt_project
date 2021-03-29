@@ -1,1 +1,22 @@
-<mxfile host="app.diagrams.net" modified="2021-03-29T12:48:56.527Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36 OPR/74.0.3911.218" etag="iC7MosfPAXmEXr8GmaIO" version="14.5.3" type="github"><diagram id="MVpvxTPfEfj-0-jQFBjt" name="Page-1">jZJNa8MwDIZ/jY+DxB7tdm3XDwY9lVHYzY212NSJgqs0aX/9kkVpEkph4IP96NOvJNQyqzdBF3aHBryQkamF+hBSykhK0Z7IXDsSx+q1I2lwhtkA9u4GDCOmpTNwnjgSoidXTGGCeQ4JTZgOASt243Q/6KdVC53CA9gn2j/SgzNk+2/M3gfDFlxqufSbnHeGTPfOXPpstcFqhNRKqGVApO6W1UvwrXq9Ll3c+on13liAnP4T8L24nE5Y0/Z2/ExhTV+HFF84y0X7kj+8c6TDERxB4L7p2osRsMwNtPlioRaVbZz2hU5aa9XMv2GWMs9mzgyBoH7acnwXolkhwAwoXBsXDpizdLw8ip/VaBC9unY0gxkzzbNP74kHeZoLK9Q/h0n82UYLrVa/</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-03-29T12:50:53.205Z" agent="5.0 (Windows)" etag="HDiMj-wlLyHPvdG1kN2E" version="14.5.3" type="github">
+  <diagram id="MVpvxTPfEfj-0-jQFBjt" name="Page-1">
+    <mxGraphModel dx="1422" dy="763" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZBvkkoxtHzbJgeFtUWgo-1" value="Mitarbeiter" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="70" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C3byRDOCPfTFIKgvN74C-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="230" y="200" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C3byRDOCPfTFIKgvN74C-2" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="240" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C3byRDOCPfTFIKgvN74C-3" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="300" width="30" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
