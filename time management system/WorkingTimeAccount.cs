@@ -4,13 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
+
 namespace Zeitmanagement_System.time_management_system {
     class WorkingTimeAccount {
+
 
         //Attribute:
         private DateTime flextimeBalance;
         private DateTime dailyTagetWorktime;
-        private static TimeRecord[] timeRecords = new TimeRecord[12];                   // einer pro Monat?
+        private static TimeRecord[] timeRecords = new TimeRecord[31];                   // einer pro Monat?
         private static VacationAccount[] vacationAccounts = new VacationAccount[20];    //einer pro MA?
 
         //Methoden:
@@ -30,13 +34,19 @@ namespace Zeitmanagement_System.time_management_system {
                 timeRecords[i].AbsenceReason = absenceReason;
                 timeRecords[i].StartOfWork = startTime;
                 timeRecords[i].EndOfWork = endTime;
-                //timeRecords[i].WorkingHours = (startTime.CompareTo(endTime); //doesnt werk dunno why.
+                timeRecords[i].WorkingHours = Convert.ToDateTime(endTime.Subtract(startTime));
                 return true;
             }
             else return false;
         }
 
+        public bool deleteTimeRecord(DateTime date,int i){
+            return (timeRecords[i].Datum == date ? false : true);
+        }
 
+        public bool duplicateCheck(DateTime date){
+            return (timeRecords[].Datum == date ? false : true);
+        }
 
 
         //Ctor:

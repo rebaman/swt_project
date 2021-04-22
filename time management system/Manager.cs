@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace time_management_system
 {
-    class Manager : Employee
+    public class Manager : Employee
     {
         
     }

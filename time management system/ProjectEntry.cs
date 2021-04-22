@@ -11,8 +11,6 @@ namespace Zeitmanagement_System.time_management_system {
         private string projectId;
         private DateTime investedTime;
 
-
-
         //Methoden:
         public string ProjectId {
             get => projectId; 
