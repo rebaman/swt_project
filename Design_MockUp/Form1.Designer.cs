@@ -33,19 +33,19 @@ namespace Design_MockUp
             this.labelKommen = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.labelGehen = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.label4 = new System.Windows.Forms.Label();
             this.radioButtonKrank = new System.Windows.Forms.RadioButton();
             this.radioButtonUrlaub = new System.Windows.Forms.RadioButton();
             this.radioButtonZeitausgleich = new System.Windows.Forms.RadioButton();
             this.groupBoxMitarbeiter = new System.Windows.Forms.GroupBox();
             this.radioButtonArbeitend = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.timePickerGehen = new System.Windows.Forms.DateTimePicker();
             this.timePickerKommen = new System.Windows.Forms.DateTimePicker();
-            this.labelProjektCaption = new System.Windows.Forms.Label();
+            this.sfCalendar1 = new Syncfusion.WinForms.Input.SfCalendar();
+            this.LabelEmployeeName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBoxMitarbeiter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,19 +81,11 @@ namespace Design_MockUp
             this.labelGehen.TabIndex = 10;
             this.labelGehen.Text = "Gehen";
             // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(38, 153);
-            this.monthCalendar1.MaxSelectionCount = 1;
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 12;
-            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(38, 37);
+            this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(310, 45);
             this.label4.TabIndex = 14;
@@ -131,11 +123,7 @@ namespace Design_MockUp
             // 
             // groupBoxMitarbeiter
             // 
-            this.groupBoxMitarbeiter.Controls.Add(this.labelProjektCaption);
             this.groupBoxMitarbeiter.Controls.Add(this.radioButtonArbeitend);
-            this.groupBoxMitarbeiter.Controls.Add(this.button2);
-            this.groupBoxMitarbeiter.Controls.Add(this.button1);
-            this.groupBoxMitarbeiter.Controls.Add(this.listBox1);
             this.groupBoxMitarbeiter.Controls.Add(this.timePickerGehen);
             this.groupBoxMitarbeiter.Controls.Add(this.timePickerKommen);
             this.groupBoxMitarbeiter.Controls.Add(this.labelGehen);
@@ -144,9 +132,9 @@ namespace Design_MockUp
             this.groupBoxMitarbeiter.Controls.Add(this.radioButtonZeitausgleich);
             this.groupBoxMitarbeiter.Controls.Add(this.labelKommen);
             this.groupBoxMitarbeiter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBoxMitarbeiter.Location = new System.Drawing.Point(292, 141);
+            this.groupBoxMitarbeiter.Location = new System.Drawing.Point(626, 154);
             this.groupBoxMitarbeiter.Name = "groupBoxMitarbeiter";
-            this.groupBoxMitarbeiter.Size = new System.Drawing.Size(430, 436);
+            this.groupBoxMitarbeiter.Size = new System.Drawing.Size(430, 448);
             this.groupBoxMitarbeiter.TabIndex = 18;
             this.groupBoxMitarbeiter.TabStop = false;
             this.groupBoxMitarbeiter.Text = "groupBox1";
@@ -162,33 +150,6 @@ namespace Design_MockUp
             this.radioButtonArbeitend.TabStop = true;
             this.radioButtonArbeitend.Text = "Arbeitend";
             this.radioButtonArbeitend.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(239, 352);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 34);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Löschen";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(76, 352);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Zuteilen";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(28, 247);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(375, 79);
-            this.listBox1.TabIndex = 22;
             // 
             // timePickerGehen
             // 
@@ -212,26 +173,77 @@ namespace Design_MockUp
             this.timePickerKommen.TabIndex = 20;
             this.timePickerKommen.Value = new System.DateTime(2000, 1, 1, 8, 0, 0, 0);
             // 
-            // labelProjektCaption
+            // sfCalendar1
             // 
-            this.labelProjektCaption.AutoSize = true;
-            this.labelProjektCaption.Location = new System.Drawing.Point(22, 219);
-            this.labelProjektCaption.Name = "labelProjektCaption";
-            this.labelProjektCaption.Size = new System.Drawing.Size(118, 25);
-            this.labelProjektCaption.TabIndex = 19;
-            this.labelProjektCaption.Text = "Project listing";
+            this.sfCalendar1.FirstDayOfWeek = System.DayOfWeek.Monday;
+            this.sfCalendar1.HighlightTodayCell = true;
+            this.sfCalendar1.Location = new System.Drawing.Point(38, 166);
+            this.sfCalendar1.MinimumSize = new System.Drawing.Size(350, 350);
+            this.sfCalendar1.Name = "sfCalendar1";
+            this.sfCalendar1.SelectedDate = null;
+            this.sfCalendar1.Size = new System.Drawing.Size(546, 436);
+            this.sfCalendar1.TabIndex = 19;
+            this.sfCalendar1.Text = "sfCalendar1";
+            this.sfCalendar1.SelectionChanged += new Syncfusion.WinForms.Input.Events.SelectionChangedEventHandler(this.sfCalendar1_SelectionChanged);
+            // 
+            // LabelEmployeeName
+            // 
+            this.LabelEmployeeName.AutoSize = true;
+            this.LabelEmployeeName.BackColor = System.Drawing.Color.Transparent;
+            this.LabelEmployeeName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LabelEmployeeName.Location = new System.Drawing.Point(38, 98);
+            this.LabelEmployeeName.Name = "LabelEmployeeName";
+            this.LabelEmployeeName.Size = new System.Drawing.Size(209, 32);
+            this.LabelEmployeeName.TabIndex = 20;
+            this.LabelEmployeeName.Text = "Mitarbeiter Name";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(38, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 25);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Benutzer:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(332, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 25);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Gleitzeitguthaben:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(332, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 32);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "-200 Stunden";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1341, 912);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1099, 641);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LabelEmployeeName);
+            this.Controls.Add(this.sfCalendar1);
             this.Controls.Add(this.groupBoxMitarbeiter);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxMitarbeiter.ResumeLayout(false);
@@ -246,7 +258,6 @@ namespace Design_MockUp
         private System.Windows.Forms.Label labelKommen;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label labelGehen;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton radioButtonKrank;
         private System.Windows.Forms.RadioButton radioButtonUrlaub;
@@ -254,11 +265,12 @@ namespace Design_MockUp
         private System.Windows.Forms.GroupBox groupBoxMitarbeiter;
         private System.Windows.Forms.DateTimePicker timePickerKommen;
         private System.Windows.Forms.DateTimePicker timePickerGehen;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
+        private Syncfusion.WinForms.Input.SfCalendar sfCalendar1;
+        private System.Windows.Forms.Label LabelEmployeeName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton radioButtonArbeitend;
-        private System.Windows.Forms.Label labelProjektCaption;
     }
 }
 

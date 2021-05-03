@@ -12,45 +12,68 @@ using System.Windows.Forms;
 
 namespace Design_MockUp
 {
-    class ProjektEntry
-    {
-        private string projectId { get; set; }
-        private int investedTime { get; set; }
-}
-    class VacationAccount
-    {
-        private int year { get; set; }
-        private int vacationEntitlement { get; set; }
-        private int vacationBalance { get; set; }
-    }
     class TimeRecord
     {
-        private DateTime workdayDate { get; set; }
-        private string absenceReason { get; set; }
-        private DateTime startOfWork { get; set; }
-        private DateTime endOfWork { get; set; }
-        private int workingHours { get; set; }
-        private bool approvalStatus { get; set; }
-        private bool recordLocked { get; set; }
-        private List<ProjektEntry> projektEntries { get; set; }
+        private DateTime workdayDate;
+        private string absenceReason;
+        private DateTime startOfWork;
+        private DateTime endOfWork;
+
+        public DateTime WorkdayDate { get; set; }
+        public string AbsenceReason { get; set; }
+        public DateTime StartOfWork { get; set; }
+        public DateTime EndOfWork { get; set; }
+        public TimeRecord(DateTime workdayDate, DateTime startOfWork, DateTime endOfWork, string absenceReason)
+        {
+            this.workdayDate = workdayDate;            
+            this.startOfWork = startOfWork;
+            this.endOfWork = endOfWork;
+            this.absenceReason = absenceReason;
+        }
+        public TimeRecord(DateTime workdayDate, string absenceReason)
+        {
+            this.workdayDate = workdayDate;
+            this.absenceReason = absenceReason;
+        }
     }
     class WorkingTimeAccount
     {
-        private int flextimeBalance { get; set; }
-        private int dailyTargetWorktime { get; set; }
-        private List<TimeRecord> timeRecords { get; set; }
-        private List<VacationAccount> vacationAccounts { get; set; }
+        private int flextimeBalance;
+        private int dailyTargetWorktime;
+        private List<TimeRecord> timeRecords;
+        public int FlextimeBalance { get; set; }
+        public int DailyTargetWorktime { get; set; }
+        public List<TimeRecord> TimeRecords { get; set; }
+        public WorkingTimeAccount(int flextimeBalance, int dailyTargetWorktime)
+        {
+            this.flextimeBalance = flextimeBalance;
+            this.dailyTargetWorktime = dailyTargetWorktime;
+        }
     }
     class Employee
     {
-        private int staffId { get; set; }
-        private string name { get; set; }
-        private string password { get; set; }
-        private string departmentId { get; set; }
-        private WorkingTimeAccount workingTimeAccount { get; set; }
-        Employee(int staffId)
+        private int staffId;
+        private string name;
+        private WorkingTimeAccount workingTimeAccount;
+        public int StaffId 
         {
-
+            get { return staffId; }
+            set { staffId = value; } 
+        }
+        public string Name 
+        {
+            get { return name; }
+            set { name = value; } 
+        }
+        public WorkingTimeAccount WorkingTimeAccount 
+        {
+            get { return workingTimeAccount; }
+            set { workingTimeAccount = value; } 
+        }
+        public Employee(int staffId, string name)
+        {
+            this.staffId = staffId;
+            this.name = name;
         }
     }
 }
