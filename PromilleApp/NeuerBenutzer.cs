@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace PromilleApp
 {
@@ -56,9 +57,49 @@ namespace PromilleApp
 
         private void buttonAnlegen_Click(object sender, EventArgs e)
         {
+            Person user;
+            geschlecht gesch;
+            if(textBoxBenutzerName.Text != "" && textBoxGewicht.Text != "" && textBoxGroesse.Text != "" && comboBoxGeschlecht.Text != "auswählen")
+            {
+                switch (comboBoxGeschlecht.Text)
+                {
+                    case "männlich":
+                        gesch = geschlecht.männlich;
+                        break;
+                    case "weiblich":
+                        gesch = geschlecht.weiblich;
+                        break;
+                    case "divers":
+                        gesch = geschlecht.divers;
+                        break;
+                    default:
+                        MessageBox.Show("Kein passendes Geschlecht gefunden!");
+                        Application.Exit();
+                        gesch = geschlecht.männlich;
+                        break;
 
-            string fileName = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\PromilleApp\\" + textBoxBenutzerName.Text + ".csv";
-            MessageBox.Show(fileName);
+                }
+                user = new Person(textBoxBenutzerName.Text, gesch, Int32.Parse(textBoxGewicht.Text), Int32.Parse(textBoxGroesse.Text), dateTimePickerGeburtstag.Value);
+                string filePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\PromilleRechner\\";
+                string fileName = textBoxBenutzerName.Text + ".csv";
+                System.IO.Directory.CreateDirectory(filePath);
+                if (!File.Exists(filePath+fileName))
+                {
+                    using (StreamWriter file = new StreamWriter(filePath+fileName))
+                    {
+                        file.WriteLine(user.toStringWithSemicolon());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Benutzername bereits vorhanden");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Nicht alle Felder ausgefüllt");
+            }
         }
 
         private void buttonVerwerfen_Click(object sender, EventArgs e)

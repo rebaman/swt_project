@@ -45,16 +45,16 @@ namespace PromilleApp
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxGeschlecht = new System.Windows.Forms.ComboBox();
             this.textBoxBenutzerName = new System.Windows.Forms.TextBox();
-            this.textBoxAlter = new System.Windows.Forms.TextBox();
             this.textBoxGewicht = new System.Windows.Forms.TextBox();
             this.textBoxGroesse = new System.Windows.Forms.TextBox();
             this.LabelBenutzerName = new System.Windows.Forms.Label();
             this.labelGeschlecht = new System.Windows.Forms.Label();
-            this.labelAlter = new System.Windows.Forms.Label();
+            this.labelGeburtstag = new System.Windows.Forms.Label();
             this.labelGewicht = new System.Windows.Forms.Label();
             this.labelGroesse = new System.Windows.Forms.Label();
             this.buttonAnlegen = new System.Windows.Forms.Button();
             this.buttonVerwerfen = new System.Windows.Forms.Button();
+            this.dateTimePickerGeburtstag = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -250,15 +250,6 @@ namespace PromilleApp
             this.textBoxBenutzerName.TabIndex = 4;
             this.textBoxBenutzerName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxBenutzerName_KeyPress);
             // 
-            // textBoxAlter
-            // 
-            this.textBoxAlter.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxAlter.Location = new System.Drawing.Point(883, 444);
-            this.textBoxAlter.Name = "textBoxAlter";
-            this.textBoxAlter.Size = new System.Drawing.Size(426, 50);
-            this.textBoxAlter.TabIndex = 5;
-            this.textBoxAlter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAlter_KeyPress);
-            // 
             // textBoxGewicht
             // 
             this.textBoxGewicht.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -297,15 +288,15 @@ namespace PromilleApp
             this.labelGeschlecht.TabIndex = 9;
             this.labelGeschlecht.Text = "Geschlecht";
             // 
-            // labelAlter
+            // labelGeburtstag
             // 
-            this.labelAlter.AutoSize = true;
-            this.labelAlter.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelAlter.Location = new System.Drawing.Point(1052, 404);
-            this.labelAlter.Name = "labelAlter";
-            this.labelAlter.Size = new System.Drawing.Size(83, 37);
-            this.labelAlter.TabIndex = 10;
-            this.labelAlter.Text = "Alter";
+            this.labelGeburtstag.AutoSize = true;
+            this.labelGeburtstag.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelGeburtstag.Location = new System.Drawing.Point(1052, 404);
+            this.labelGeburtstag.Name = "labelGeburtstag";
+            this.labelGeburtstag.Size = new System.Drawing.Size(83, 37);
+            this.labelGeburtstag.TabIndex = 10;
+            this.labelGeburtstag.Text = "Alter";
             // 
             // labelGewicht
             // 
@@ -351,22 +342,34 @@ namespace PromilleApp
             this.buttonVerwerfen.UseVisualStyleBackColor = false;
             this.buttonVerwerfen.Click += new System.EventHandler(this.buttonVerwerfen_Click);
             // 
+            // dateTimePickerGeburtstag
+            // 
+            this.dateTimePickerGeburtstag.CalendarFont = new System.Drawing.Font("SansSerif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerGeburtstag.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerGeburtstag.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerGeburtstag.Location = new System.Drawing.Point(883, 448);
+            this.dateTimePickerGeburtstag.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerGeburtstag.Name = "dateTimePickerGeburtstag";
+            this.dateTimePickerGeburtstag.Size = new System.Drawing.Size(426, 45);
+            this.dateTimePickerGeburtstag.TabIndex = 15;
+            this.dateTimePickerGeburtstag.Value = new System.DateTime(1990, 1, 1, 22, 57, 0, 0);
+            // 
             // NeuerBenutzer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1500, 1000);
+            this.Controls.Add(this.dateTimePickerGeburtstag);
             this.Controls.Add(this.buttonVerwerfen);
             this.Controls.Add(this.buttonAnlegen);
             this.Controls.Add(this.labelGroesse);
             this.Controls.Add(this.labelGewicht);
-            this.Controls.Add(this.labelAlter);
+            this.Controls.Add(this.labelGeburtstag);
             this.Controls.Add(this.labelGeschlecht);
             this.Controls.Add(this.LabelBenutzerName);
             this.Controls.Add(this.textBoxGroesse);
             this.Controls.Add(this.textBoxGewicht);
-            this.Controls.Add(this.textBoxAlter);
             this.Controls.Add(this.textBoxBenutzerName);
             this.Controls.Add(this.comboBoxGeschlecht);
             this.Controls.Add(this.label1);
@@ -403,16 +406,16 @@ namespace PromilleApp
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBoxGeschlecht;
         private System.Windows.Forms.TextBox textBoxBenutzerName;
-        private System.Windows.Forms.TextBox textBoxAlter;
         private System.Windows.Forms.TextBox textBoxGewicht;
         private System.Windows.Forms.TextBox textBoxGroesse;
         private System.Windows.Forms.Label LabelBenutzerName;
         private System.Windows.Forms.Label labelGeschlecht;
-        private System.Windows.Forms.Label labelAlter;
+        private System.Windows.Forms.Label labelGeburtstag;
         private System.Windows.Forms.Label labelGewicht;
         private System.Windows.Forms.Label labelGroesse;
         private System.Windows.Forms.Button buttonAnlegen;
         private System.Windows.Forms.Button buttonVerwerfen;
+        private System.Windows.Forms.DateTimePicker dateTimePickerGeburtstag;
     }
 }
 
