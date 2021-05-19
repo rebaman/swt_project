@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Danie\\Source\\Repos\\PromilleApp\\PromilleApp\\PromilleApp.csproj",
+      "projectUniqueName": "C:\\Users\\Danie\\Source\\Repos\\swt_project\\PromilleApp\\PromilleApp.csproj",
       "projectName": "PromilleApp",
-      "projectPath": "C:\\Users\\Danie\\Source\\Repos\\PromilleApp\\PromilleApp\\PromilleApp.csproj",
+      "projectPath": "C:\\Users\\Danie\\Source\\Repos\\swt_project\\PromilleApp\\PromilleApp.csproj",
       "packagesPath": "C:\\Users\\Danie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Danie\\Source\\Repos\\PromilleApp\\PromilleApp\\obj\\",
+      "outputPath": "C:\\Users\\Danie\\Source\\Repos\\swt_project\\PromilleApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "M:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

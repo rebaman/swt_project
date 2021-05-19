@@ -59,5 +59,12 @@ namespace PromilleApp
             frm.Show();
             this.Hide();
         }
+
+        private void Vorlage_Shown(object sender, EventArgs e)
+        {
+            Form frm = new Uebersicht();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
