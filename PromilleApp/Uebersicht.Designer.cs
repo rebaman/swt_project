@@ -70,6 +70,7 @@ namespace PromilleApp
             this.comboBox1.Size = new System.Drawing.Size(277, 33);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.Text = "--- KEIN BENUTZER ---";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -228,6 +229,7 @@ namespace PromilleApp
             this.Name = "Uebersicht";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Promillerechner";
+            this.Load += new System.EventHandler(this.Uebersicht_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);

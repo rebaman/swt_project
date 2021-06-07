@@ -36,6 +36,7 @@ namespace PromilleApp
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -43,6 +44,17 @@ namespace PromilleApp
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxGetraenk = new System.Windows.Forms.ComboBox();
+            this.textBoxVolumen = new System.Windows.Forms.TextBox();
+            this.LabelGetraenk = new System.Windows.Forms.Label();
+            this.labelGewicht = new System.Windows.Forms.Label();
+            this.buttonHinzufuegen = new System.Windows.Forms.Button();
+            this.labelAlkohol = new System.Windows.Forms.Label();
+            this.labelPromille = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.buttonLoeschen = new System.Windows.Forms.Button();
+            this.buttonSpeichern = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -70,6 +82,7 @@ namespace PromilleApp
             this.comboBox1.Size = new System.Drawing.Size(277, 33);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.Text = "--- KEIN BENUTZER ---";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -121,6 +134,15 @@ namespace PromilleApp
             this.button6.TabIndex = 7;
             this.button6.Text = "  ";
             this.button6.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 25;
+            this.listBox1.Location = new System.Drawing.Point(349, 388);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(664, 279);
+            this.listBox1.TabIndex = 11;
             // 
             // panel2
             // 
@@ -210,9 +232,119 @@ namespace PromilleApp
             this.label1.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(161, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(340, 37);
+            this.label1.Size = new System.Drawing.Size(309, 37);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Getränke hinzufügen";
+            this.label1.Text = "Getränke eingeben";
+            // 
+            // comboBoxGetraenk
+            // 
+            this.comboBoxGetraenk.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxGetraenk.FormattingEnabled = true;
+            this.comboBoxGetraenk.Location = new System.Drawing.Point(349, 272);
+            this.comboBoxGetraenk.Name = "comboBoxGetraenk";
+            this.comboBoxGetraenk.Size = new System.Drawing.Size(227, 53);
+            this.comboBoxGetraenk.TabIndex = 12;
+            this.comboBoxGetraenk.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // textBoxVolumen
+            // 
+            this.textBoxVolumen.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxVolumen.Location = new System.Drawing.Point(632, 275);
+            this.textBoxVolumen.Name = "textBoxVolumen";
+            this.textBoxVolumen.Size = new System.Drawing.Size(227, 50);
+            this.textBoxVolumen.TabIndex = 13;
+            this.textBoxVolumen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // LabelGetraenk
+            // 
+            this.LabelGetraenk.AutoSize = true;
+            this.LabelGetraenk.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LabelGetraenk.Location = new System.Drawing.Point(349, 232);
+            this.LabelGetraenk.Name = "LabelGetraenk";
+            this.LabelGetraenk.Size = new System.Drawing.Size(227, 37);
+            this.LabelGetraenk.TabIndex = 14;
+            this.LabelGetraenk.Text = "Benutzername";
+            // 
+            // labelGewicht
+            // 
+            this.labelGewicht.AutoSize = true;
+            this.labelGewicht.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelGewicht.Location = new System.Drawing.Point(632, 235);
+            this.labelGewicht.Name = "labelGewicht";
+            this.labelGewicht.Size = new System.Drawing.Size(181, 37);
+            this.labelGewicht.TabIndex = 15;
+            this.labelGewicht.Text = "Menge (ml)";
+            // 
+            // buttonHinzufuegen
+            // 
+            this.buttonHinzufuegen.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonHinzufuegen.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonHinzufuegen.Location = new System.Drawing.Point(1140, 388);
+            this.buttonHinzufuegen.Name = "buttonHinzufuegen";
+            this.buttonHinzufuegen.Size = new System.Drawing.Size(235, 67);
+            this.buttonHinzufuegen.TabIndex = 16;
+            this.buttonHinzufuegen.Text = "Hinzufügen";
+            this.buttonHinzufuegen.UseVisualStyleBackColor = false;
+            // 
+            // labelAlkohol
+            // 
+            this.labelAlkohol.AutoSize = true;
+            this.labelAlkohol.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelAlkohol.Location = new System.Drawing.Point(632, 797);
+            this.labelAlkohol.Name = "labelAlkohol";
+            this.labelAlkohol.Size = new System.Drawing.Size(171, 37);
+            this.labelAlkohol.TabIndex = 18;
+            this.labelAlkohol.Text = "Alkohol (g)";
+            // 
+            // labelPromille
+            // 
+            this.labelPromille.AutoSize = true;
+            this.labelPromille.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPromille.Location = new System.Drawing.Point(349, 797);
+            this.labelPromille.Name = "labelPromille";
+            this.labelPromille.Size = new System.Drawing.Size(133, 37);
+            this.labelPromille.TabIndex = 20;
+            this.labelPromille.Text = "Promille";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(632, 837);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(227, 50);
+            this.textBox1.TabIndex = 21;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Location = new System.Drawing.Point(349, 837);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(227, 50);
+            this.textBox2.TabIndex = 22;
+            // 
+            // buttonLoeschen
+            // 
+            this.buttonLoeschen.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonLoeschen.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonLoeschen.Location = new System.Drawing.Point(1140, 600);
+            this.buttonLoeschen.Name = "buttonLoeschen";
+            this.buttonLoeschen.Size = new System.Drawing.Size(235, 67);
+            this.buttonLoeschen.TabIndex = 23;
+            this.buttonLoeschen.Text = "Löschen";
+            this.buttonLoeschen.UseVisualStyleBackColor = false;
+            // 
+            // buttonSpeichern
+            // 
+            this.buttonSpeichern.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonSpeichern.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSpeichern.Location = new System.Drawing.Point(1140, 495);
+            this.buttonSpeichern.Name = "buttonSpeichern";
+            this.buttonSpeichern.Size = new System.Drawing.Size(235, 67);
+            this.buttonSpeichern.TabIndex = 24;
+            this.buttonSpeichern.Text = "Speichern";
+            this.buttonSpeichern.UseVisualStyleBackColor = false;
             // 
             // NeuerEintrag
             // 
@@ -220,6 +352,18 @@ namespace PromilleApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1500, 1000);
+            this.Controls.Add(this.buttonSpeichern);
+            this.Controls.Add(this.buttonLoeschen);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labelPromille);
+            this.Controls.Add(this.labelAlkohol);
+            this.Controls.Add(this.buttonHinzufuegen);
+            this.Controls.Add(this.labelGewicht);
+            this.Controls.Add(this.LabelGetraenk);
+            this.Controls.Add(this.textBoxVolumen);
+            this.Controls.Add(this.comboBoxGetraenk);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -228,6 +372,7 @@ namespace PromilleApp
             this.Name = "NeuerEintrag";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Promillerechner";
+            this.Load += new System.EventHandler(this.NeuerEintrag_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -251,6 +396,18 @@ namespace PromilleApp
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ComboBox comboBoxGetraenk;
+        private System.Windows.Forms.TextBox textBoxVolumen;
+        private System.Windows.Forms.Label LabelGetraenk;
+        private System.Windows.Forms.Label labelGewicht;
+        private System.Windows.Forms.Button buttonHinzufuegen;
+        private System.Windows.Forms.Label labelAlkohol;
+        private System.Windows.Forms.Label labelPromille;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button buttonLoeschen;
+        private System.Windows.Forms.Button buttonSpeichern;
     }
 }
 

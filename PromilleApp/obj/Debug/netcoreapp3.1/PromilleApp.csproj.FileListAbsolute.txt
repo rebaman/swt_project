@@ -54,3 +54,5 @@ C:\Users\Danie\Source\Repos\swt_project\PromilleApp\obj\Debug\netcoreapp3.1\Prom
 C:\Users\Danie\Source\Repos\swt_project\PromilleApp\obj\Debug\netcoreapp3.1\PromilleApp.dll
 C:\Users\Danie\Source\Repos\swt_project\PromilleApp\obj\Debug\netcoreapp3.1\PromilleApp.pdb
 C:\Users\Danie\Source\Repos\swt_project\PromilleApp\obj\Debug\netcoreapp3.1\PromilleApp.genruntimeconfig.cache
+C:\Users\Danie\source\repos\swt_project\PromilleApp\bin\Debug\netcoreapp3.1\CsvHelper.dll
+C:\Users\Danie\source\repos\swt_project\PromilleApp\obj\Debug\netcoreapp3.1\PromilleApp.csproj.CopyComplete

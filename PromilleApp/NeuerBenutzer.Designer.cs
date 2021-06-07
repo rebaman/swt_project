@@ -31,7 +31,6 @@ namespace PromilleApp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NeuerBenutzer));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -63,7 +62,6 @@ namespace PromilleApp
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightCoral;
-            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button8);
@@ -72,16 +70,6 @@ namespace PromilleApp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1500, 70);
             this.panel1.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(736, 18);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(277, 33);
-            this.comboBox1.TabIndex = 10;
-            this.comboBox1.Text = "--- KEIN BENUTZER ---";
             // 
             // pictureBox1
             // 
@@ -403,7 +391,6 @@ namespace PromilleApp
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBoxGeschlecht;
         private System.Windows.Forms.TextBox textBoxBenutzerName;
         private System.Windows.Forms.TextBox textBoxGewicht;

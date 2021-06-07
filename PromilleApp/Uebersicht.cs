@@ -52,5 +52,29 @@ namespace PromilleApp
             frm.Show();
             this.Close();
         }
+
+        private void Uebersicht_Load(object sender, EventArgs e)
+        {
+            if (Globals.personen.Count() > 0)
+            {
+                comboBox1.Items.Clear();
+                foreach (var r in Globals.personen)
+                {
+                    this.comboBox1.Items.Add(r.Benutzername);
+                }
+                comboBox1.SelectedIndex = Globals.personen.IndexOf(Globals.aktuellerBenutzer);
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var r in Globals.personen)
+            {
+                if(r.Benutzername == comboBox1.Text)
+                {
+                    Globals.aktuellerBenutzer = r;
+                }
+            }
+        }
     }
 }

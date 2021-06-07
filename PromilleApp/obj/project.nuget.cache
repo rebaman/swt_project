@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "3VHfXu4FsBkK+9mS9jn4CrhJ7tVQwBDakrhhwm1f5gnPAcMsFEEtq4SXnXeTyalXLI1E/4J94imdk1gXdMO+GQ==",
+  "dgSpecHash": "hXSijv3YXuTWxPx/qn2lvIAd5KYAUYcW54D84dO4PIz0FGsljt3OouOPCvnBeoXDUnZUSdsNtVsu9TYXzX6N4w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Danie\\Source\\Repos\\swt_project\\PromilleApp\\PromilleApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Danie\\source\\repos\\swt_project\\PromilleApp\\PromilleApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Danie\\.nuget\\packages\\csvhelper\\27.1.0\\csvhelper.27.1.0.nupkg.sha512",
+    "C:\\Users\\Danie\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Danie\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Danie\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Danie\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Users\\Danie\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512"
+  ],
   "logs": []
 }

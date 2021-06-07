@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Danie\\Source\\Repos\\swt_project\\PromilleApp\\PromilleApp.csproj": {}
+    "C:\\Users\\Danie\\source\\repos\\swt_project\\PromilleApp\\PromilleApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Danie\\Source\\Repos\\swt_project\\PromilleApp\\PromilleApp.csproj": {
+    "C:\\Users\\Danie\\source\\repos\\swt_project\\PromilleApp\\PromilleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Danie\\Source\\Repos\\swt_project\\PromilleApp\\PromilleApp.csproj",
+        "projectUniqueName": "C:\\Users\\Danie\\source\\repos\\swt_project\\PromilleApp\\PromilleApp.csproj",
         "projectName": "PromilleApp",
-        "projectPath": "C:\\Users\\Danie\\Source\\Repos\\swt_project\\PromilleApp\\PromilleApp.csproj",
+        "projectPath": "C:\\Users\\Danie\\source\\repos\\swt_project\\PromilleApp\\PromilleApp.csproj",
         "packagesPath": "C:\\Users\\Danie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Danie\\Source\\Repos\\swt_project\\PromilleApp\\obj\\",
+        "outputPath": "C:\\Users\\Danie\\source\\repos\\swt_project\\PromilleApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "M:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -45,6 +45,16 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[27.1.0, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
