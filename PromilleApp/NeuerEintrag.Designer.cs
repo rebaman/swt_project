@@ -36,7 +36,6 @@ namespace PromilleApp
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -54,7 +53,12 @@ namespace PromilleApp
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.buttonLoeschen = new System.Windows.Forms.Button();
-            this.buttonSpeichern = new System.Windows.Forms.Button();
+            this.listViewGetraenke = new System.Windows.Forms.ListView();
+            this.columnGetraenk = new System.Windows.Forms.ColumnHeader();
+            this.columnMenge = new System.Windows.Forms.ColumnHeader();
+            this.columnAlkohol = new System.Windows.Forms.ColumnHeader();
+            this.labelFahren = new System.Windows.Forms.Label();
+            this.labelNuechtern = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -134,15 +138,6 @@ namespace PromilleApp
             this.button6.TabIndex = 7;
             this.button6.Text = "  ";
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(349, 388);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(664, 279);
-            this.listBox1.TabIndex = 11;
             // 
             // panel2
             // 
@@ -279,22 +274,23 @@ namespace PromilleApp
             // 
             this.buttonHinzufuegen.BackColor = System.Drawing.SystemColors.HighlightText;
             this.buttonHinzufuegen.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonHinzufuegen.Location = new System.Drawing.Point(1140, 388);
+            this.buttonHinzufuegen.Location = new System.Drawing.Point(1140, 421);
             this.buttonHinzufuegen.Name = "buttonHinzufuegen";
             this.buttonHinzufuegen.Size = new System.Drawing.Size(235, 67);
             this.buttonHinzufuegen.TabIndex = 16;
             this.buttonHinzufuegen.Text = "Hinzufügen";
             this.buttonHinzufuegen.UseVisualStyleBackColor = false;
+            this.buttonHinzufuegen.Click += new System.EventHandler(this.buttonHinzufuegen_Click);
             // 
             // labelAlkohol
             // 
             this.labelAlkohol.AutoSize = true;
             this.labelAlkohol.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelAlkohol.Location = new System.Drawing.Point(632, 797);
+            this.labelAlkohol.Location = new System.Drawing.Point(610, 797);
             this.labelAlkohol.Name = "labelAlkohol";
-            this.labelAlkohol.Size = new System.Drawing.Size(171, 37);
+            this.labelAlkohol.Size = new System.Drawing.Size(277, 37);
             this.labelAlkohol.TabIndex = 18;
-            this.labelAlkohol.Text = "Alkohol (g)";
+            this.labelAlkohol.Text = "Alkoholsumme (g)";
             // 
             // labelPromille
             // 
@@ -328,23 +324,63 @@ namespace PromilleApp
             // 
             this.buttonLoeschen.BackColor = System.Drawing.SystemColors.HighlightText;
             this.buttonLoeschen.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonLoeschen.Location = new System.Drawing.Point(1140, 600);
+            this.buttonLoeschen.Location = new System.Drawing.Point(1140, 571);
             this.buttonLoeschen.Name = "buttonLoeschen";
             this.buttonLoeschen.Size = new System.Drawing.Size(235, 67);
             this.buttonLoeschen.TabIndex = 23;
             this.buttonLoeschen.Text = "Löschen";
             this.buttonLoeschen.UseVisualStyleBackColor = false;
+            this.buttonLoeschen.Click += new System.EventHandler(this.buttonLoeschen_Click);
             // 
-            // buttonSpeichern
+            // listViewGetraenke
             // 
-            this.buttonSpeichern.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonSpeichern.Font = new System.Drawing.Font("SansSerif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonSpeichern.Location = new System.Drawing.Point(1140, 495);
-            this.buttonSpeichern.Name = "buttonSpeichern";
-            this.buttonSpeichern.Size = new System.Drawing.Size(235, 67);
-            this.buttonSpeichern.TabIndex = 24;
-            this.buttonSpeichern.Text = "Speichern";
-            this.buttonSpeichern.UseVisualStyleBackColor = false;
+            this.listViewGetraenke.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnGetraenk,
+            this.columnMenge,
+            this.columnAlkohol});
+            this.listViewGetraenke.FullRowSelect = true;
+            this.listViewGetraenke.GridLines = true;
+            this.listViewGetraenke.HideSelection = false;
+            this.listViewGetraenke.Location = new System.Drawing.Point(349, 388);
+            this.listViewGetraenke.MultiSelect = false;
+            this.listViewGetraenke.Name = "listViewGetraenke";
+            this.listViewGetraenke.Size = new System.Drawing.Size(664, 279);
+            this.listViewGetraenke.TabIndex = 25;
+            this.listViewGetraenke.UseCompatibleStateImageBehavior = false;
+            this.listViewGetraenke.View = System.Windows.Forms.View.Details;
+            // 
+            // columnGetraenk
+            // 
+            this.columnGetraenk.Text = "Getränk";
+            this.columnGetraenk.Width = 200;
+            // 
+            // columnMenge
+            // 
+            this.columnMenge.Text = "Menge (ml)";
+            this.columnMenge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnMenge.Width = 120;
+            // 
+            // columnAlkohol
+            // 
+            this.columnAlkohol.Text = "Alkohol (g)";
+            this.columnAlkohol.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnAlkohol.Width = 120;
+            // 
+            // labelFahren
+            // 
+            this.labelFahren.AutoSize = true;
+            this.labelFahren.Location = new System.Drawing.Point(975, 892);
+            this.labelFahren.Name = "labelFahren";
+            this.labelFahren.Size = new System.Drawing.Size(0, 25);
+            this.labelFahren.TabIndex = 26;
+            // 
+            // labelNuechtern
+            // 
+            this.labelNuechtern.AutoSize = true;
+            this.labelNuechtern.Location = new System.Drawing.Point(975, 937);
+            this.labelNuechtern.Name = "labelNuechtern";
+            this.labelNuechtern.Size = new System.Drawing.Size(0, 25);
+            this.labelNuechtern.TabIndex = 27;
             // 
             // NeuerEintrag
             // 
@@ -352,7 +388,9 @@ namespace PromilleApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1500, 1000);
-            this.Controls.Add(this.buttonSpeichern);
+            this.Controls.Add(this.labelNuechtern);
+            this.Controls.Add(this.labelFahren);
+            this.Controls.Add(this.listViewGetraenke);
             this.Controls.Add(this.buttonLoeschen);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -363,7 +401,6 @@ namespace PromilleApp
             this.Controls.Add(this.LabelGetraenk);
             this.Controls.Add(this.textBoxVolumen);
             this.Controls.Add(this.comboBoxGetraenk);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -396,7 +433,6 @@ namespace PromilleApp
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ComboBox comboBoxGetraenk;
         private System.Windows.Forms.TextBox textBoxVolumen;
         private System.Windows.Forms.Label LabelGetraenk;
@@ -407,7 +443,12 @@ namespace PromilleApp
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button buttonLoeschen;
-        private System.Windows.Forms.Button buttonSpeichern;
+        private System.Windows.Forms.ListView listViewGetraenke;
+        private System.Windows.Forms.ColumnHeader columnGetraenk;
+        private System.Windows.Forms.ColumnHeader columnMenge;
+        private System.Windows.Forms.ColumnHeader columnAlkohol;
+        private System.Windows.Forms.Label labelFahren;
+        private System.Windows.Forms.Label labelNuechtern;
     }
 }
 
